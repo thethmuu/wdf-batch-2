@@ -1,0 +1,88 @@
+/* universal selector -> all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.new-section p {
+  font-size: 24px;
+}
+
+.new-section p em {
+  padding: 24px;
+  /* display: inline-block; */
+}
+
+body {
+  /* vh -> viewport height, 1vh = 1% of viewport height*/
+  height: 100vh;
+  display: flex;
+  /* cross axis */
+  align-items: center;
+}
+
+.card-section {
+  /* flexbox */
+  display: flex;
+  /* x axis */
+  justify-content: center;
+  /* y axis */
+}
+
+.card {
+  width: 480px;
+  /* short hand */
+  border: 4px solid #cccccc;
+  margin-right: 12px;
+
+  border-radius: 8px;
+}
+
+/* cascading */
+/* inheritance */
+/* specificity */
+
+.card-content {
+  padding: 12px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 24px;
+}
+
+.card-section .card .card-title {
+  color: rebeccapurple;
+}
+
+.card-section .card-title {
+  color: teal;
+}
+
+.card-description {
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.card-link {
+  margin-top: 18px;
+  /* remove underline */
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+  padding: 6px 12px 6px 12px;
+  background-color: #3398dc;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+}
+
+/* pseudo class */
+.card-link:hover {
+  background-color: #188cd8;
+}
+
+img {
+  width: 100%;
+}
