@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Manrope:wght@400;500;600;700&display=swap');
 
+<!-- css units -->
+/* 1. px (static unit)
+relative unit
+2. % 
+3. vh, vw
+4. rem (1rem = font-size of root element)
+5. em (1em = font-size of parent element) */
+
 /* basic browser reset */
 * {
   margin: 0;
@@ -18,6 +26,7 @@ h1,
 h2,
 h3 {
   color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* all images */
@@ -64,7 +73,17 @@ img {
   border: none;
   border-radius: 6px;
 }
+.subscribe-btn:hover {
+  background-color: #b76519;
+  box-shadow: 6px 6px 9px #ccc;
+}
 
+a {
+  color: green;
+}
+a:visited {
+  color: red;
+}
 /* hero section */
 .hero-section {
   display: flex;
@@ -105,4 +124,51 @@ img {
 
 .author-info .info p {
   margin-top: 4px;
+}
+
+/* card section */
+.card-section {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 48px;
+  /* flex-wrap: wrap; */
+}
+.card {
+  width: 300px;
+}
+
+.card .writer-info {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 16px;
+  align-items: center;
+}
+
+.card .writer-info .writer-avatar {
+  width: 64px;
+}
+
+.card .card-content {
+  margin-top: 12px;
+}
+
+.card .card-description {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.card .writer-info {
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+/* footer */
+footer {
+  /* 1vh = 1 % of viewport height */
+  margin-top: 24px;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
