@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Manrope:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-size: 16px;
+  /* fallback font */
+  font-family: 'Manrope', sans-serif;
+  color: #676767;
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.nav-items {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+}
+.page-title {
+  text-align: center;
+}
+main {
+  display: flex;
+  text-align: center;
+}
+aside,
+aside .top,
+aside .bottom,
+.right,
+.right .breaking,
+.right .css,
+.right .bottom {
+  border: 1px solid black;
+}
+aside {
+  width: 40%;
+}
+.right {
+  width: 60%;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+.img-container img {
+  width: 240px;
+}
