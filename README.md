@@ -1,4 +1,5 @@
 # WDF Course by CreaThit
+course length - 36 days or a little more
 
 ## 🔗 External Links for Study
 - [How to learn CSS](https://www.smashingmagazine.com/2019/01/how-to-learn-css/)
