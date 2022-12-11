@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/* Rules of Thumb */
+/* em -> padding, margin */
+/* rem -> font-size, width, height */
+/* px -> small measurements */
+
+/* browser reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  width: 780px;
+  margin: 5em auto;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.container .form-container {
+  width: 60%;
+  padding: 3em 2em;
+}
+.container img {
+  width: 100%;
+}
+form .title {
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+form .form-control {
+  margin-top: 2em;
+  display: flex;
+  gap: 0.5em;
+}
+.form-control .form-input {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+form small {
+  color: #444;
+  margin-top: 6px;
+}
+.buttons {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buttons a {
+  color: #1a73e8;
+  text-decoration: none;
+  padding: 8px 6px;
+  border-radius: 6px;
+}
+.buttons a:hover {
+  color: #1563c9;
+  background-color: #e8eef6;
+}
+.buttons button {
+  padding: 10px 1.25em;
+  border-radius: 6px;
+  border: none;
+  background-color: #1a73e8;
+  color: white;
+}
+.buttons button:hover {
+  background-color: #1562c6;
+}
+.img-container {
+  padding: 2.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img-container .description {
+  margin-top: 0.5em;
+  font-weight: 300;
+  text-align: center;
+}
