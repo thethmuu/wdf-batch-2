@@ -10,11 +10,17 @@
   <body>
     <section class="card">
       <h1>Customer Count</h1>
-      <p>0</p>
+      <p class="count"></p>
       <div class="btn-container">
-        <button>Increase</button>
-        <button>Descrease</button>
+        <!-- click event -->
+        <button onclick="increase()">Increase</button>
+        <button onclick="decrease()">Decrease</button>
       </div>
+      <!-- event listen -->
+      <button onclick="save()">Save</button>
+      <button onclick="greet()">Greet</button>
     </section>
+
+    <script src="script.js"></script>
   </body>
 </html>

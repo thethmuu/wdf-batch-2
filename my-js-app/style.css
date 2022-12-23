@@ -45,6 +45,7 @@ body {
   gap: 1em;
 }
 button {
+  margin-top: 1em;
   font-family: inherit;
   font-size: inherit;
   color: inherit;
