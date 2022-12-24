@@ -8,20 +8,30 @@ let customerName = 'Cheryl';
 
 // const -> cannot be reassigned
 // let -> can be reassigned
-countEl.innerText = count;
+countEl.textContent = count;
 
 function greet() {
-  titleEl.innerText = greeting + ' ' + customerName;
+  titleEl.textContent = greeting + ' ' + customerName;
 }
 
 function increase() {
-  count = count + 1;
-  countEl.innerText = count;
+  // count = count + 1;
+  count += 1;
+  countEl.textContent = count;
 }
 
 function decrease() {
-  count = count - 1;
-  countEl.innerText = count;
+  // if count > 0
+  if (count > 0) {
+    // count = count - 1;
+    count -= 1
+  }
+  countEl.textContent = count;
+}
+
+function reset() {
+  count = 0
+  countEl.textContent = count
 }
 
 function save() {
