@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Listing</title>
+    <!-- title icon -->
+    <link rel="icon" type="image/x-icon" href="/images/movies.png" />
+    <!-- font awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Listing My Movies</h1>
+    </header>
+    <!-- submit -->
+    <form class="form">
+      <input
+        type="text"
+        class="movie-input"
+        placeholder="movie name"
+        required
+      />
+      <button class="movie-button">
+        <i class="fa-solid fa-circle-plus"></i>Save
+      </button>
+    </form>
+    <div class="movie-container">
+      <ul class="movie-list"></ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
