@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-image: url('images/game-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
