@@ -2,35 +2,11 @@
 
 body {
   font-family: 'Nunito', sans-serif;
-  background-image: linear-gradient(rgb(111, 74, 23), transparent),
-    url('images/game-background.jpg');
+  background-image: url('images/game-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   color: white;
   font-weight: bold;
   font-size: 24px;
-}
-
-h1 {
-  color: goldenrod;
-  font-size: 3rem;
-}
-
-#message-el {
-  font-style: italic;
-  font-size: 2rem;
-}
-
-button {
-  border: none;
-  padding: 12px 24px;
-  background-color: bisque;
-  color: #222;
-  font-weight: 700;
-}
-
-button:hover {
-  background-color: #ffcd91;
-  cursor: pointer;
 }
