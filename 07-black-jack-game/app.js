@@ -13,7 +13,9 @@ const inputForm = document.querySelector('.input-form');
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 
-inputForm.addEventListener('submit', function (event) {
+inputForm.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
   event.preventDefault();
   const player = {
     name: nameInput.value,
@@ -21,14 +23,14 @@ inputForm.addEventListener('submit', function (event) {
   };
   // || -> or
   // && -> and
-  if (nameInput.value !== '' || emailInput.value !== '') {
+  if (nameInput.value !== '' && emailInput.value !== '') {
     const greetingText = `Good morning, ${player.name} and your email is ${player.email}`;
 
     greetingEl.textContent = greetingText;
   } else {
-    alert('Please fill in all data')
+    alert('Please fill in all data');
   }
-});
+}
 
 function getRandomNumber() {
   const result = Math.floor(Math.random() * 13) + 1;
@@ -84,3 +86,79 @@ function pullNewCard() {
     alert('You have already won!');
   }
 }
+
+// camelCase
+// firstName
+// userEmail
+// showPassword
+
+// PascalCase
+// UserInputForm
+// ToggleTheme
+// InputButton
+
+// snake_case
+// thet_hmuu
+
+// kebab-case
+// create-card-component
+// unifeed-blog-page
+
+// name, age, address
+// printData -> 'Name is ..., age is ... and I live in ...'
+
+// Exercises
+
+const person = {
+  name: 'Caleb',
+  age: 27,
+  address: 'Myanmar',
+};
+
+function printData() {
+  console.log(
+    `Name is ${person.name}, age is ${person.age} and I live in ${person.address}`
+  );
+}
+
+let age = 25;
+// age 6 -> child
+// < 18 -> youth
+// > 18 -> adult
+if (age < 6) {
+  console.log('child');
+} else if (age < 18) {
+  console.log('youth');
+} else if (age > 18) {
+  console.log('adult');
+}
+
+const students = ['myat', 'arkar', 'han', 'sakura'];
+// push
+// pop
+// shift
+// unshift
+
+let day = 31;
+let weekday = 'Friday';
+
+if (day === 31 || weekday === 'Friday') {
+  console.log('chill');
+}
+
+let fruits = ['🍎', '🍍', '🍎', '🍍', '🍎', '🍍', '🍍', '🍍'];
+
+let applesBasket = [];
+let pineapplesBasket = [];
+
+function sortFruit() {
+  for (let i = 0; i < fruits.length; i++) {
+    if (fruits[i] === '🍎') {
+      applesBasket.push(fruits[i]);
+    } else if (fruits[i] === '🍍') {
+      pineapplesBasket.push(fruits[i]);
+    }
+  }
+}
+
+sortFruit();
