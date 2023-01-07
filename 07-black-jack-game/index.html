@@ -9,13 +9,29 @@
   </head>
   <body>
     <h1>Blackjack Game</h1>
+    <form class="input-form">
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter player name"
+      />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Enter player email"
+      />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="greeting"></p>
     <p id="message">Want to start a game round?</p>
 
     <button onclick="startGame()">Start Game</button>
     <button onclick="pullNewCard()">Pull New Card</button>
-    
-    <p id="sum">Sum: </p>
-    <p id="cards">Cards: </p>
+
+    <p id="sum">Sum:</p>
+    <p id="cards">Cards:</p>
 
     <script src="app.js"></script>
   </body>

@@ -6,8 +6,29 @@ let message = '';
 let cards = [];
 
 const messageEl = document.querySelector('#message');
+const greetingEl = document.querySelector('#greeting');
 const sumEl = document.querySelector('#sum');
 const cardsEl = document.querySelector('#cards');
+const inputForm = document.querySelector('.input-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+
+inputForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  const player = {
+    name: nameInput.value,
+    email: emailInput.value,
+  };
+  // || -> or
+  // && -> and
+  if (nameInput.value !== '' || emailInput.value !== '') {
+    const greetingText = `Good morning, ${player.name} and your email is ${player.email}`;
+
+    greetingEl.textContent = greetingText;
+  } else {
+    alert('Please fill in all data')
+  }
+});
 
 function getRandomNumber() {
   const result = Math.floor(Math.random() * 13) + 1;
@@ -23,7 +44,7 @@ function startGame() {
   cards = [firstCard, secondCard];
   sum = firstCard + secondCard;
   checkResult();
-  isAlive = true
+  isAlive = true;
 }
 
 function checkResult() {
@@ -53,13 +74,13 @@ function pullNewCard() {
   // isAlive, hasBlackjack
   // sum === 2 && age < 18
   if (isAlive === true && hasBlackjack === false) {
-     let newCard = getRandomNumber();
-     sum += newCard;
-     cards.push(newCard);
-     checkResult();
-  } else if(isAlive === false) {
-    alert('You are out of game!')
+    let newCard = getRandomNumber();
+    sum += newCard;
+    cards.push(newCard);
+    checkResult();
+  } else if (isAlive === false) {
+    alert('You are out of game!');
   } else if (hasBlackjack === true) {
-    alert('You have already won!')
+    alert('You have already won!');
   }
 }
