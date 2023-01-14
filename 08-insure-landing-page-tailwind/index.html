@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body class="text-gray-500">
+    <header class="flex justify-between container mx-auto p-5">
+      <img class="self-center" src="images/logo.svg" alt="Insure Logo" />
+      <div class="flex items-center gap-8 uppercase">
+        <nav>
+          <ul class="flex items-center gap-8">
+            <li><a href="#">How we work</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Account</a></li>
+          </ul>
+        </nav>
+        <button class="font-medium border boder-solid px-6 py-1 uppercase">
+          View plans
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- hero section -->
+      <section class="bg-fuchsia-900 text-white">
+        <div class="container mx-auto flex gap-8">
+          <!-- hero left -->
+          <div class="w-1/2 py-24">
+            <div class="h-[1px] w-36 bg-white"></div>
+            <h1 class="text-[72px] font-bold mt-16">
+              Humanizing your insurance.
+            </h1>
+            <p class="mt-4">
+              Get your life insurance coverage easier and faster. We blend our
+              expertise and technology to help you find the plan that’s right
+              for you. Ensure you and your loved ones are protected.
+            </p>
+            <button
+              class="font-medium px-6 py-1 uppercase border border-solid boder-white mt-8 hover:bg-white hover:text-gray-500"
+            >
+              View plans
+            </button>
+          </div>
+          <!-- hero right -->
+          <div>
+            <img
+              class="translate-y-24"
+              src="images/image-intro-desktop.jpg"
+              alt="Intro"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
