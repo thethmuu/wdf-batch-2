@@ -11,7 +11,7 @@
   <body class="text-gray-500">
     <header class="flex justify-between container mx-auto p-5">
       <img class="self-center" src="images/logo.svg" alt="Insure Logo" />
-      <div class="flex items-center gap-8 uppercase">
+      <div class="hidden sm:flex items-center gap-8 uppercase">
         <nav>
           <ul class="flex items-center gap-8">
             <li><a href="#">How we work</a></li>
@@ -19,19 +19,21 @@
             <li><a href="#">Account</a></li>
           </ul>
         </nav>
-        <button class="font-medium border boder-solid px-6 py-1 uppercase">
+        <button
+          class="font-medium border boder-solid border-[#2d2640] px-6 py-1 uppercase hover:text-white hover:bg-[#2d2640]"
+        >
           View plans
         </button>
       </div>
     </header>
     <main>
       <!-- hero section -->
-      <section class="bg-fuchsia-900 text-white">
-        <div class="container mx-auto flex gap-8">
+      <section class="bg-[#2d2640] text-white">
+        <div class="container mx-auto flex flex-col sm:flex-row gap-8">
           <!-- hero left -->
-          <div class="w-1/2 py-24">
+          <div class="w-full sm:w-1/2 py-24 px-8 text-center sm:text-left">
             <div class="h-[1px] w-36 bg-white"></div>
-            <h1 class="text-[72px] font-bold mt-16">
+            <h1 class="text-6xl sm:text-[72px] font-semibold mt-16">
               Humanizing your insurance.
             </h1>
             <p class="mt-4">
@@ -55,6 +57,120 @@
           </div>
         </div>
       </section>
+      <!-- features section -->
+      <section>
+        <div class="container mx-auto mt-40">
+          <div class="h-[1px] w-36 bg-gray-900"></div>
+          <h1 class="text-[72px] font-bold mt-16">We’re different</h1>
+          <!-- cards container -->
+          <div class="flex flex-wrap sm:flex-nowrap gap-8 mt-12">
+            <article class="py-8 text-center sm:text-left px-6 sm:px-0">
+              <img
+                class="mx-auto"
+                src="images/icon-snappy-process.svg"
+                alt="Snappy process"
+              />
+              <h3 class="mt-8 font-bold text-2xl">Snappy Process</h3>
+              <p class="mt-6 text-gray-400">
+                Our application process can be completed in minutes, not hours.
+                Don’t get stuck filling in tedious forms.
+              </p>
+            </article>
+            <article class="py-8 text-center sm:text-left px-6 sm:px-0">
+              <img
+                class="mx-auto"
+                src="images/icon-affordable-prices.svg"
+                alt="Snappy process"
+              />
+              <h3 class="mt-8 font-bold text-2xl">Affordable Prices</h3>
+              <p class="mt-6 text-gray-400">
+                We don’t want you worrying about high monthly costs. Our prices
+                may be low, but we still offer the best coverage possible.
+              </p>
+            </article>
+            <article class="py-8 text-center sm:text-left px-6 sm:px-0">
+              <img
+                class="mx-auto"
+                src="images/icon-people-first.svg"
+                alt="Snappy process"
+              />
+              <h3 class="mt-8 font-bold text-2xl">Snappy Process</h3>
+              <p class="mt-6 text-gray-400">
+                Our application process can be completed in minutes, not hours.
+                Don’t get stuck filling in tedious forms.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- how we work section -->
+      <!-- br -> break line -->
+      <section class="px-5">
+        <div
+          class="container mx-auto py-16 bg-[#2d2640] flex flex-wrap sm:flex-nowrap items-center px-12 sm:px-24 text-white"
+        >
+          <h4 class="text-5xl sm:text-6xl text-center sm:text-left font-semibold sm:w-2/3">
+            Find out more<br />
+            about how we work
+          </h4>
+          <div class="flex justify-center sm:justify-end w-full sm:w-1/3 mt-10 sm:mt-0">
+            <button
+              class="uppercase text-sm font-medium py-2 px-6 border border-solid border-white"
+            >
+              How we work
+            </button>
+          </div>
+        </div>
+      </section>
+      <footer class="bg-[#fafafa] py-16">
+        <div class="container mx-auto">
+          <!-- upper -->
+          <div class="flex justify-between items-center py-6">
+            <img src="images/logo.svg" alt="Insure logo" />
+            <ul class="flex gap-3">
+              <li><img src="images/icon-facebook.svg" alt="" /></li>
+              <li><img src="images/icon-twitter.svg" alt="" /></li>
+              <li><img src="images/icon-pinterest.svg" alt="" /></li>
+              <li>
+                <img src="images/icon-instagram.svg" alt="" />
+              </li>
+            </ul>
+          </div>
+          <!-- hr = horizontal line -->
+          <hr />
+          <!-- lower -->
+          <div class="uppercase py-6 flex justify-between">
+            <div class="w-64">
+              <p>Our company</p>
+              <ul class="leading-loose font-semibold mt-6">
+                <li><a href="">How we work</a></li>
+                <li><a href="">Why Insure?</a></li>
+              </ul>
+            </div>
+            <div class="w-64">
+              <p>Our company</p>
+              <ul class="leading-loose font-semibold mt-6">
+                <li><a href="">How we work</a></li>
+                <li><a href="">Why Insure?</a></li>
+              </ul>
+            </div>
+            <div class="w-64">
+              <p>Our company</p>
+              <ul class="leading-loose font-semibold mt-6">
+                <li><a href="">How we work</a></li>
+                <li><a href="">Why Insure?</a></li>
+              </ul>
+            </div>
+            <div class="w-64">
+              <p>Our company</p>
+              <ul class="leading-loose font-semibold mt-6 text-[#2d2640]">
+                <li><a href="">How we work</a></li>
+                <li><a href="">Why Insure?</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
