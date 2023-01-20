@@ -11,3 +11,33 @@ h4,
 h5 {
   font-family: 'DM Serif Display', serif;
 }
+
+.mobile-nav {
+  transform: translateX(-100%);
+  transition: all 300ms;
+}
+
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+#hero-section {
+  background-image: url('images/bg-pattern-intro-right-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+#how-we-work .container {
+  background-image: url('images/bg-pattern-how-we-work-mobile.svg');
+
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+@media (width >= 640px) {
+  #hero-section {
+    background-image: url('images/bg-pattern-intro-right-desktop.svg');
+  }
+  #how-we-work .container {
+    background-image: url('images/bg-pattern-how-we-work-desktop.svg');
+  }
+}

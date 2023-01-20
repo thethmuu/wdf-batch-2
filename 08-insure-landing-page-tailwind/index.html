@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
@@ -12,6 +20,7 @@
     <header class="flex justify-between container mx-auto p-5">
       <img class="self-center" src="images/logo.svg" alt="Insure Logo" />
       <div class="hidden sm:flex items-center gap-8 uppercase">
+        <!-- desktop nav -->
         <nav>
           <ul class="flex items-center gap-8">
             <li><a href="#">How we work</a></li>
@@ -25,10 +34,27 @@
           View plans
         </button>
       </div>
+      <div class="sm:hidden burger cursor-pointer">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </header>
-    <main>
+
+    <main class="relative">
+      <!-- mobile nav -->
+      <nav class="bg-stone-700 h-screen px-3 mobile-nav absolute top-0 w-full">
+        <ul class="text-white text-2xl text-center uppercase">
+          <li class="p-5"><a href="#">How we work</a></li>
+          <li class="p-5"><a href="#">Blog</a></li>
+          <li class="p-5"><a href="#">Account</a></li>
+        </ul>
+        <button
+          class="font-medium text-white text-2xl w-full border boder-solid border-white px-6 py-3 uppercase hover:text-white hover:bg-[#2d2640]"
+        >
+          View plans
+        </button>
+      </nav>
       <!-- hero section -->
-      <section class="bg-[#2d2640] text-white">
+      <section class="bg-[#2d2640] text-white" id="hero-section">
         <div class="container mx-auto flex flex-col sm:flex-row gap-8">
           <!-- hero left -->
           <div class="w-full sm:w-1/2 py-24 px-8 text-center sm:text-left">
@@ -105,15 +131,19 @@
       </section>
       <!-- how we work section -->
       <!-- br -> break line -->
-      <section class="px-5">
+      <section class="px-5" id="how-we-work">
         <div
           class="container mx-auto py-16 bg-[#2d2640] flex flex-wrap sm:flex-nowrap items-center px-12 sm:px-24 text-white"
         >
-          <h4 class="text-5xl sm:text-6xl text-center sm:text-left font-semibold sm:w-2/3">
+          <h4
+            class="text-5xl sm:text-6xl text-center sm:text-left font-semibold sm:w-2/3"
+          >
             Find out more<br />
             about how we work
           </h4>
-          <div class="flex justify-center sm:justify-end w-full sm:w-1/3 mt-10 sm:mt-0">
+          <div
+            class="flex justify-center sm:justify-end w-full sm:w-1/3 mt-10 sm:mt-0"
+          >
             <button
               class="uppercase text-sm font-medium py-2 px-6 border border-solid border-white"
             >
@@ -172,5 +202,7 @@
         </div>
       </footer>
     </main>
+
+    <script src="app.js"></script>
   </body>
 </html>
