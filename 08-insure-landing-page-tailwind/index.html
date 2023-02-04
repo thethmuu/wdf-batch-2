@@ -14,6 +14,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Document</title>
   </head>
   <body class="text-gray-500">
@@ -23,7 +24,8 @@
         <!-- desktop nav -->
         <nav>
           <ul class="flex items-center gap-8">
-            <li><a href="#">How we work</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-we-work">How we work</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Account</a></li>
           </ul>
@@ -54,7 +56,12 @@
         </button>
       </nav>
       <!-- hero section -->
-      <section class="bg-[#2d2640] text-white" id="hero-section">
+      <section
+        data-aos="zoom-out-up"
+        data-aos-duration="1500"
+        class="bg-[#2d2640] text-white"
+        id="hero-section"
+      >
         <div class="container mx-auto flex flex-col sm:flex-row gap-8">
           <!-- hero left -->
           <div class="w-full sm:w-1/2 py-24 px-8 text-center sm:text-left">
@@ -84,7 +91,9 @@
         </div>
       </section>
       <!-- features section -->
-      <section>
+      <section id="features" 
+      data-aos="fade-up" data-aos-duration="1500"
+      >
         <div class="container mx-auto mt-40">
           <div class="h-[1px] w-36 bg-gray-900"></div>
           <h1 class="text-[72px] font-bold mt-16">We’re different</h1>
@@ -131,7 +140,12 @@
       </section>
       <!-- how we work section -->
       <!-- br -> break line -->
-      <section class="px-5" id="how-we-work">
+      <section
+        data-aos="flip-down"
+        data-aos-duration="1500"
+        class="px-5"
+        id="how-we-work"
+      >
         <div
           class="container mx-auto py-16 bg-[#2d2640] flex flex-wrap sm:flex-nowrap items-center px-12 sm:px-24 text-white"
         >
@@ -157,7 +171,11 @@
           <!-- upper -->
           <div class="flex justify-between items-center py-6">
             <img src="images/logo.svg" alt="Insure logo" />
-            <ul class="flex gap-3">
+            <ul
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
+              class="flex gap-3"
+            >
               <li><img src="images/icon-facebook.svg" alt="" /></li>
               <li><img src="images/icon-twitter.svg" alt="" /></li>
               <li><img src="images/icon-pinterest.svg" alt="" /></li>
@@ -169,7 +187,10 @@
           <!-- hr = horizontal line -->
           <hr />
           <!-- lower -->
-          <div class="uppercase py-6 flex justify-between">
+          <div
+            data-aos="fade-right"
+            class="uppercase py-6 flex justify-between"
+          >
             <div class="w-64">
               <p>Our company</p>
               <ul class="leading-loose font-semibold mt-6">
@@ -204,5 +225,9 @@
     </main>
 
     <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
