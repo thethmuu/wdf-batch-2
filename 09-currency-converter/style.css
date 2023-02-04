@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+}
+
+.container {
+  margin-top: 7rem;
+  width: 474px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #f8f8f8;
+  border: 3px solid white;
+  border-radius: 16px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.container header {
+  padding: 1rem 0;
+  color: white;
+  background-color: #a18df3;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.header-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.header-title::selection {
+  color: goldenrod;
+  background-color: white;
+}
+
+.header-input {
+  display: block;
+  margin-top: 1.25rem;
+  width: 86px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.header-input::-webkit-outer-spin-button,
+.header-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.header-btn {
+  margin-top: 1.25rem;
+  padding: 8px 18px;
+  font-family: inherit;
+  font-weight: 600;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.currencies {
+  padding: 12px;
+}
+.card {
+  margin-bottom: 24px;
+  padding: 16px 0;
+  background-color: white;
+}
+/* pseudo selector */
+.card:last-of-type {
+  margin-bottom: 0;
+}
+.card .title {
+  font-weight: 700;
+  color: #222;
+}
+.card .value {
+  color: #747474;
+  font-weight: 600;
+  margin-top: 14px;
+}
