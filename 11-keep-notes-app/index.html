@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/google-keep.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <!-- font-awesome -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="app.js"></script>
+
+    <title>Keep Notes</title>
+  </head>
+  <body>
+    <aside class="aside"></aside>
+    <div class="container">
+      <nav>
+        <label for="search">
+          <input
+            type="search"
+            id="search"
+            placeholder="Type to search notes..."
+          />
+        </label>
+        <button class="toggle-btn"></button>
+      </nav>
+
+      <div class="form-container">
+        <h1>Keep Notes</h1>
+        <form>
+          <input type="text" id="title" placeholder="Title" />
+          <textarea
+            name="note"
+            id="note"
+            cols="30"
+            rows="5"
+            placeholder="Take a note..."
+          ></textarea>
+
+          <select name="categories" id="categories">
+            <option value="1">Coding</option>
+            <option value="2">Music</option>
+            <option value="3">Movies</option>
+          </select>
+
+          <button type="submit">Save</button>
+        </form>
+      </div>
+
+      <div class="note-container">
+        <!-- note item -->
+       
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
