@@ -1,5 +1,7 @@
 // global selectors
 const noteContainer = document.querySelector('.note-container');
+const categoriesContainer = document.querySelector('.categories-container');
+
 const modal = document.querySelector('#modal');
 const form = document.querySelector('form');
 const titleInput = document.querySelector('#title');
@@ -7,6 +9,68 @@ const noteInput = document.querySelector('#note');
 const categoriesInput = document.querySelector('#categories');
 
 let notes = [];
+const categories = [
+  {
+    id: 1,
+    name: 'Music',
+  },
+  {
+    id: 2,
+    name: 'Coding',
+  },
+  {
+    id: 3,
+    name: 'Finance',
+  },
+];
+
+window.addEventListener('DOMContentLoaded', () => {
+  showAllNotes();
+  showAllCategories();
+});
+
+noteContainer.addEventListener('click', (event) => {
+  if (event.target.classList.contains('note__delete')) {
+    // closest = find nearest element with class
+    const currentNote = event.target.closest('.note');
+    const id = currentNote.querySelector('span').textContent;
+    const confirmDelete = confirm('Sure to delete the note?');
+    if (confirmDelete === true) {
+      // 1. remove from localStorage
+      removeNote(id);
+      // 2. remove from UI
+      currentNote.remove();
+      alert('Note deleted');
+    }
+  }
+
+  if (event.target.classList.contains('note__view')) {
+    const currentNote = event.target.closest('.note');
+    const noteTitle = currentNote.querySelector('.note__title').textContent;
+    const noteBody = currentNote.querySelector('.note__body').textContent;
+
+    openNoteModal(noteTitle, noteBody);
+  }
+});
+
+function openNoteModal(noteTitle, noteBody) {
+  const modalTitle = document.querySelector('.modal__title');
+  const modalBody = document.querySelector('.modal__body');
+  modalTitle.textContent = noteTitle;
+  modalBody.textContent = noteBody;
+  modal.showModal();
+}
+
+// close modal
+document
+  .querySelector('.modal__btn')
+  .addEventListener('click', () => modal.close());
+
+function removeNote(id) {
+  let notes = getNotes();
+  notes = notes.filter((note) => note.id !== Number(id));
+  localStorage.setItem('keep.notes', JSON.stringify(notes));
+}
 
 // Class: for creating a  new  note
 class Note {
@@ -16,6 +80,39 @@ class Note {
     this.category = category;
     this.id = Math.floor(Math.random() * 2000);
   }
+}
+
+function showAllCategories() {
+  categories.forEach((category) => {
+    addCategoryToSidebar(category);
+    addCategoryToSelectList(category);
+  });
+}
+
+function addCategoryToSidebar(category) {
+  const li = document.createElement('li');
+  li.classList.add('category-item');
+  li.innerHTML = `
+    <span class='hidden-id' hidden>${category.id}</span>
+    <span>${category.name}</span>
+  `;
+  categoriesContainer.appendChild(li);
+}
+
+function addCategoryToSelectList(category) {
+  const optionEl = document.createElement('option');
+  optionEl.setAttribute('value', category.id);
+  optionEl.textContent = category.name;
+  categoriesInput.appendChild(optionEl);
+}
+
+// Function: Show notes in UI
+function showAllNotes() {
+  notes = getNotes();
+
+  notes.forEach((note) => {
+    addNoteToUIList(note);
+  });
 }
 
 form.addEventListener('submit', (event) => {
@@ -43,20 +140,6 @@ form.addEventListener('submit', (event) => {
     alert('Please fill both inputs');
   }
 });
-
-//  <article class='note'>
-// <span></span>
-//    <h2 class='note__title'>Title</h2>
-//    <p class='note__body'>Lorem ipsum dolor sit amet.</p>
-//    <div class='note__btns'>
-//      <button class='note__btn note__view'>
-//        <i class='fa-solid fa-eye'></i>
-//      </button>
-//      <button class='note__btn note__delete'>
-//        <i class='fa-solid fa-trash'></i>
-//      </button>
-//    </div>
-//  </article>;
 
 function addNoteToUIList(note) {
   const newUINote = document.createElement('article');
@@ -102,8 +185,6 @@ function saveNoteToLocalStorage(note) {
 
 // UI UPDATES
 // Function: Create new note in UI
-
-// Function: Show notes in UI
 
 // Function: Show alert message
 

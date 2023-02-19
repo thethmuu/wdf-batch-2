@@ -24,7 +24,9 @@
     <title>Keep Notes</title>
   </head>
   <body>
-    <aside class="aside"></aside>
+    <aside class="aside">
+      <ul class="categories-container"></ul>
+    </aside>
     <div class="container">
       <nav>
         <label for="search">
@@ -36,6 +38,12 @@
         </label>
         <button class="toggle-btn"></button>
       </nav>
+      <!-- modal box -->
+      <dialog id="modal" class="modal">
+        <button class="modal__btn">&times;</button>
+        <h2 class="modal__title"></h2>
+        <p class="modal__body"></p>
+      </dialog>
 
       <div class="form-container">
         <h1>Keep Notes</h1>
@@ -49,11 +57,7 @@
             placeholder="Take a note..."
           ></textarea>
 
-          <select name="categories" id="categories">
-            <option value="1">Coding</option>
-            <option value="2">Music</option>
-            <option value="3">Movies</option>
-          </select>
+          <select name="categories" id="categories"></select>
 
           <button type="submit">Save</button>
         </form>
@@ -61,7 +65,6 @@
 
       <div class="note-container">
         <!-- note item -->
-       
       </div>
     </div>
 
