@@ -7,8 +7,11 @@ const form = document.querySelector('form');
 const titleInput = document.querySelector('#title');
 const noteInput = document.querySelector('#note');
 const categoriesInput = document.querySelector('#categories');
+const toggleBtn = document.querySelector('.toggle-btn');
+const searchInput = document.querySelector('#search');
 
 let notes = [];
+let filteredNotes = [];
 const categories = [
   {
     id: 1,
@@ -24,9 +27,69 @@ const categories = [
   },
 ];
 
+let theme = 'light';
+
 window.addEventListener('DOMContentLoaded', () => {
   showAllNotes();
   showAllCategories();
+  if (localStorage.getItem('theme')) {
+    theme = localStorage.getItem('theme');
+  }
+  loadTheme();
+});
+
+function toggleTheme() {
+  theme === 'light' ? (theme = 'dark') : (theme = 'light');
+
+  loadTheme();
+}
+
+function loadTheme() {
+  const root = document.querySelector('body');
+  root.setAttribute('color-scheme', theme);
+  toggleBtn.innerHTML =
+    theme === 'light'
+      ? `<i class="fa-solid fa-lightbulb"></i>`
+      : `<i class='fa-solid fa-moon'></i>`;
+}
+
+toggleBtn.addEventListener('click', () => {
+  toggleTheme();
+  localStorage.setItem('theme', theme);
+});
+
+searchInput.addEventListener('keyup', filterNote);
+
+function filterNote() {
+  const searchTerm = searchInput.value.toLowerCase();
+
+  filteredNotes = notes.filter((note) => {
+    return [note.title, note.body].join('').toLowerCase().includes(searchTerm);
+  });
+
+  addFilteredNoteToUI(filteredNotes);
+}
+
+function addFilteredNoteToUI(notes) {
+  noteContainer.innerHTML = '';
+  notes.forEach((note) => {
+    addNoteToUIList(note);
+  });
+}
+
+function filterNoteByCategory(categoryId) {
+  console.log(notes);
+  let categorizedNotes = notes.filter(
+    (note) => Number(note.category) === Number(categoryId)
+  );
+  console.log(categorizedNotes);
+  addFilteredNoteToUI(categorizedNotes);
+}
+
+categoriesContainer.addEventListener('click', (event) => {
+  const currentItem = event.target.closest('.category-item');
+  const id = currentItem.querySelector('.hidden-id').textContent;
+  filterNoteByCategory(id);
 });
 
 noteContainer.addEventListener('click', (event) => {
@@ -67,7 +130,8 @@ document
   .addEventListener('click', () => modal.close());
 
 function removeNote(id) {
-  let notes = getNotes();
+  // let notes = getNotes();
+  console.log(notes);
   notes = notes.filter((note) => note.id !== Number(id));
   localStorage.setItem('keep.notes', JSON.stringify(notes));
 }
@@ -122,8 +186,10 @@ form.addEventListener('submit', (event) => {
     const newNote = new Note(
       titleInput.value,
       noteInput.value,
-      categoriesInput.input
+      categoriesInput.value
     );
+
+    console.log(newNote);
 
     // add newNote to UI
     addNoteToUIList(newNote);

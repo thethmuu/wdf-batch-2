@@ -7,7 +7,6 @@
   --text-light: #e8eaed;
   --text-dark: #333;
 }
-
 [color-scheme=light] {
   --bg-color: var(--bg-light);
   --text-color: var(--text-dark);
@@ -19,7 +18,8 @@
   --text-color: var(--text-light);
   --btn-color: var(--btn-dark);
 }
-
+/*  custom properties or variables */
+--primary-color: #008080;
 *,
 *::after,
 *::before {
